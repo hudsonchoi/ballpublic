@@ -1,0 +1,42 @@
+<SCRIPT Language=VBScript RUNAT=Server>
+
+Sub Application_OnStart
+	Application("DB_ConnectionString") = "DSN=MLBStyleGuide;UID=mlb;PWD=mzyk4Xej"
+End Sub
+
+Sub Application_OnEnd
+End Sub
+
+Sub Session_OnStart
+
+	Set Session("UserEntryErrors") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("UserEntryData") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("UserReEntryErrors") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("UserReEntryData") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("UserModifyErrors") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("UserModifyData") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("UserDelData") = Server.CreateObject("Scripting.Dictionary")
+	
+	Set Session("CompanyEntryErrors") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("CompanyrEntryData") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("CompanyModifyErrors") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("CompanyModifyData") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("CompanyDelData") = Server.CreateObject("Scripting.Dictionary")
+	
+	Set Session("FriendErrors") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("FriendData") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("MemberData") = Server.CreateObject("Scripting.Dictionary")
+	Set Session("Legacy") = Server.CreateObject("Scripting.Dictionary")
+
+
+End Sub		
+
+Sub Session_OnEnd
+	Set Session("RegErrors") = Nothing
+	Set Session("RegData") = Nothing
+	Set Session("FriendErrors") = Nothing
+	Set Session("FriendData") = Nothing
+	Set Session("MemberData") = Nothing
+	
+End Sub
+</SCRIPT>

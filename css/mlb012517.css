@@ -1,0 +1,155 @@
+body { 
+
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif; 
+    background-image: url("../images/wallpaper/background.jpg");
+    background-position:top;
+    background-repeat:no-repeat; 
+    background-color: #000;
+    background-size:1690px;
+    position: relative; 
+    /*color:#C9CACC;*/
+
+}
+
+
+#login {
+    width:596px;
+    height:566px;
+    margin: 0 auto;
+    margin-top:120px;
+    /*background-image:url("../images/login.jpg");*/
+    /*color:white;
+    border:solid;
+    border-bottom-width:2px;*/
+}
+
+
+
+#unpw {
+    margin:0px;
+    padding:0px;
+    border:solid;
+    position:fixed;
+    /*margin-top:65px;*/
+    margin-left:25px;
+}
+
+.unpw {
+    width:510px;
+    height:33px;
+    font-size:24px;
+    border: none;
+    margin-top:10px;
+    /*background: transparent;*/
+}
+
+#login_banner {
+    background-image:url("../images/login/login.jpg");
+    height:61px;
+    width:595px;
+}
+
+#username_td {
+    background-image:url("../images/login/username.jpg");
+    height:59px;
+    width:595px;
+    padding-left:26px;
+}
+
+#divider {
+    background-image:url("../images/login/divider.jpg");
+    height:32px;
+    width:595px;
+}
+
+#password_td{
+    background-image:url("../images/login/password.jpg");
+    height:59px;
+    width:595px;
+    padding-left:26px;
+}
+
+#action {
+    background-image:url("../images/login/action.jpg");
+    height:27px;
+    width:595px;
+}
+#howto {
+    padding:0px;
+    background-image:url("../images/login/howto.jpg");
+    height:328px;
+    width:595px;
+}
+
+.cover
+{
+    position:absolute;
+    width:100px;
+    z-index:100;
+    font-size:24px;
+    color:#C9CACC;
+    margin-top:-15px;
+    padding-left:11px;
+}
+
+.profile_field {
+    position:absolute; 
+    margin-top:-26px
+}
+
+#signin {
+    position:absolute; 
+    margin-top:-155px;
+    margin-left:165px;
+    width:266px;
+}
+
+#submit {
+     background-image:url("../images/login/signin.jpg");
+     width:266px;
+     height:51px;
+     border:0px;
+     cursor:pointer;
+}
+#submit:hover {
+    background-image: url('../images/login/signin_h.jpg')
+  }
+table {
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0;
+}
+
+#access_panel {
+    width:596px;
+    height:940px;
+    margin: 0 auto;
+    margin-top:120px;
+    background-image:url("../images/access/panel.jpg");
+}
+
+.sitelet {
+    width:596px;
+    height:62px;
+    text-align:center;
+}
+
+#panel_header {
+    width:596px;
+    height:100px;
+}
+
+.new {
+    position:absolute;
+    float:left;
+    padding-left:92px;
+}
+
+.coming_soon {
+    position:absolute;
+    float:left;
+    padding-left:95px;
+}
