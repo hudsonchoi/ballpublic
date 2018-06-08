@@ -203,7 +203,15 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://playball.mlbstyleguide.com/sitelet/2016?token=" + context.Request.QueryString["guid"]);
             }
-
+            else if (context.Request.QueryString["section"] == "london")
+            {
+                if (context.Session["london_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["london_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://londonseries.mlbstyleguide.com/sitelet/2018?token=" + context.Request.QueryString["guid"]);
+            }
         }
 
     }

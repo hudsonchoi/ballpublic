@@ -48,7 +48,7 @@
             <% End If%>
 
             <% If Session("MemberData").Item("spring") Then %>
-            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=spring&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('spring','','./images/access/spring_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/spring.jpg" name="spring" width="410" height="51" border="0" id="spring"/></a></div>
+            <div class="sitelet"><a href="handler.ashx?section=spring&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('spring','','./images/access/spring_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/spring.jpg" name="spring" width="410" height="51" border="0" id="spring"/></a></div>
             <% End If %>
 
             <% If Session("MemberData").Item("opening") Then %>
