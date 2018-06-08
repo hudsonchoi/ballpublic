@@ -178,7 +178,8 @@ a.main:active {
 	'images/gnav_18ClubMarks_ON.gif','images/gnav_18ClubMarks_RO.gif','images/gnav_18ClubMarks_ONRO.gif',
     'images/gnav_mascotbabies_ON.gif','images/gnav_mascotbabies_RO.gif','images/gnav_mascotbabies_ONRO.gif',
     'images/gnav_pressbox_ON.gif','images/gnav_pressbox_RO.gif,'images/gnav_pressbox_ONRO.gif',
-    'images/gnav_playball_ON.gif','images/gnav_playball_RO.gif,'images/gnav_playball_ONRO.gif')">
+    'images/gnav_playball_ON.gif','images/gnav_playball_RO.gif,'images/gnav_playball_ONRO.gif',
+    'images/gnav_london_ON.gif','images/gnav_london_RO.gif,'images/gnav_london_ONRO.gif')">
 <div id="test" style="position:absolute; z-index:1; visibility: hidden">Content for class "test" id "test" Goes Here</div>
 <table width="100%"  border="0" cellpadding="0" cellspacing="0" background="images/nav_back.gif">
   <tr> 
@@ -245,7 +246,12 @@ a.main:active {
           <% If Session("MemberData").Item("playball") Then %>
           <td nowrap align="center"><a href="handler.ashx?section=playball&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onClick="MM_nbGroup('down','group1','playball','images/gnav_playball_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','playball','images/gnav_playball_RO.gif','images/gnav_playball_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img src="images/gnav_playball_OFF.gif" alt="PLAY BALL" name="playball" width="112" height="22" border="0"></a></td>
           <td><img src="images/nav_pipe.gif" width="2" height="22"></td>
-          <% end If%>	 
+          <% end If%>
+
+          <% If Session("MemberData").Item("london") Then %>
+          <td nowrap align="center"><a href="handler.ashx?section=london&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onClick="MM_nbGroup('down','group1','london','images/gnav_london_ON.gif',1);if(this.blur)this.blur();" onMouseOver="MM_nbGroup('over','london','images/gnav_london_RO.gif','images/gnav_london_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img src="images/gnav_london_OFF.gif" alt="London Series" name="london" width="112" height="22" border="0"></a></td>
+          <td><img src="images/nav_pipe.gif" width="2" height="22"></td>
+          <% end If%>	
 	    </tr>
       </table></td>
   </tr>
