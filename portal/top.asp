@@ -250,7 +250,7 @@ a.main:active {
           <% end If%>
 
 		  <% If Session("MemberData").Item("sponsors") Then %>
-          <td nowrap align="center"><a href="handler.ashx?section=sponsors&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onClick="MM_nbGroup('down','group1','sponsors','images/gnav_london_ON.gif',1);if(this.blur)this.blur();" onMouseOver="MM_nbGroup('over','sponsors','images/gnav_sponsors_RO.gif','images/gnav_sponsors_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img src="images/gnav_sponsors_OFF.gif" alt="Sponsors Section" name="sponsors" width="112" height="22" border="0"></a></td>
+          <td nowrap align="center"><a href="handler.ashx?section=sponsors&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onClick="MM_nbGroup('down','group1','sponsors','images/gnav_sponsors_ON.gif',1);if(this.blur)this.blur();" onMouseOver="MM_nbGroup('over','sponsors','images/gnav_sponsors_RO.gif','images/gnav_sponsors_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img src="images/gnav_sponsors_OFF.gif" alt="Sponsors Section" name="sponsors" width="112" height="22" border="0"></a></td>
           <td><img src="images/nav_pipe.gif" width="2" height="22"></td>
           <% end If%>	
 		  
