@@ -313,6 +313,7 @@ Sub ProvideLuxuryService()
             Case "13" Session("MemberData").Item("mascotbabies") = True
             Case "14" Session("MemberData").Item("pressbox") = True
             Case "15" Session("MemberData").Item("playball") = True
+			Case "16" Session("MemberData").Item("sponsors") = True
             Case "17" Session("MemberData").Item("london") = True
 		    Case Else
 		End Select
@@ -362,6 +363,7 @@ Sub ProvideSuperiorService(ByRef myUID)
             Case "13" Session("MemberData").Item("mascotbabies") = True
             Case "14" Session("MemberData").Item("pressbox") = True
             Case "15" Session("MemberData").Item("playball") = True
+			Case "16" Session("MemberData").Item("sponsors") = True
             Case "17" Session("MemberData").Item("london") = True
 		    Case Else
 		End Select
@@ -413,6 +415,7 @@ Sub ProvideModerateService(ByRef myUID, ByRef myAllowedYear)
                 Case "13" Session("MemberData").Item("mascotbabies") = True
                 Case "14" Session("MemberData").Item("pressbox") = True
                 Case "15" Session("MemberData").Item("playball") = True
+                Case "16" Session("MemberData").Item("sponsors") = True
                 Case "17" Session("MemberData").Item("london") = True
 		        Case Else
 		    End Select
@@ -466,7 +469,8 @@ Sub ProvideGeneralService(ByRef myUID, ByRef myFromDate, ByRef myToDate)
                 Case "13" Session("MemberData").Item("mascotbabies") = True
                 Case "14" Session("MemberData").Item("pressbox") = True
                 Case "15" Session("MemberData").Item("playball") = True
-                Case "17" Session("MemberData").Item("london") = True
+                Case "16" Session("MemberData").Item("sponsors") = True
+				Case "17" Session("MemberData").Item("london") = True
 		        Case Else
 		    End Select
             oRsLicenseeSitelets.MoveNext
