@@ -210,7 +210,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     LogThisLogin(context);
                     context.Session["sponsors_login"] = "true";
                 }
-                context.Response.Redirect("frameset.asp?target=https://sponsors.mlbstyleguide.com/sitelet/sponsors/home?token=" + context.Request.QueryString["guid"]);
+                context.Response.Redirect("frameset.asp?target=https://sponsors.mlbstyleguide.com/sitelet/2018?token=" + context.Request.QueryString["guid"]);
             }
             else if (context.Request.QueryString["section"] == "london")
             {
