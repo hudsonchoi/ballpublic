@@ -100,7 +100,7 @@
             <% End If %>
 
             <% If Session("MemberData").Item("restricted2") Then %>	
-            <div class="sitelet"><a href="handler.ashx?section=restricted2&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('restricted2','','./images/access/restricted2_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/restricted2.jpg" name="restricted2" width="410" height="51" border="0" id="restricted2"></a></div>
+            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=restricted2&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('restricted2','','./images/access/restricted2_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/restricted2.jpg" name="restricted2" width="410" height="51" border="0" id="restricted2"></a></div>
             <% End If %>
             <div style="width:596px; text-align:center; font-size:12px; margin-top:-5px"><a href="/questionnaire.aspx" style="color:#6e6f71">Help! I'm having problems accessing one of the sites.</a></div>       
         </div>
