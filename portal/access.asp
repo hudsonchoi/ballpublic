@@ -37,7 +37,7 @@
 </script>
         <link href="./css/mlb.css?<%= Server.URLEncode(now) %>" rel="stylesheet" type="text/css">
     </head>
-    <body onLoad="MM_preloadImages('./images/access/marks18.jpg','./images/access/marks18_h.jpg','./images/access/marks16.jpg','./images/access/marks16_h.jpg','./images/access/marks17.jpg','./images/access/marks17_h.jpg','./images/access/spring.jpg','./images/access/spring_h.jpg','./images/access/opening.jpg','./images/access/opening_h.jpg','./images/access/all.jpg','./images/access/all_h.jpg','./images/access/post.jpg','./images/access/post_h.jpg','./images/access/coop.jpg','./images/access/coop_h.jpg','./images/access/mascot.jpg','./images/access/mascot_h.jpg','./images/access/minor.png','./images/access/minor_h.png','./images/access/restricted.jpg','./images/access/restricted_h.jpg','./images/access/playball.jpg','./images/access/playball_h.jpg','./images/access/london.jpg','./images/access/london_h.jpg',,'./images/access/sponsors.jpg','./images/access/sponsors_h.jpg')">
+    <body onLoad="MM_preloadImages('./images/access/marks18.jpg','./images/access/marks18_h.jpg','./images/access/marks16.jpg','./images/access/marks16_h.jpg','./images/access/marks17.jpg','./images/access/marks17_h.jpg','./images/access/spring.jpg','./images/access/spring_h.jpg','./images/access/opening.jpg','./images/access/opening_h.jpg','./images/access/all.jpg','./images/access/all_h.jpg','./images/access/post.jpg','./images/access/post_h.jpg','./images/access/coop.jpg','./images/access/coop_h.jpg','./images/access/mascot.jpg','./images/access/mascot_h.jpg','./images/access/minor.png','./images/access/minor_h.png','./images/access/restricted.jpg','./images/access/restricted_h.jpg','./images/access/playball.jpg','./images/access/playball_h.jpg','./images/access/london.jpg','./images/access/london_h.jpg',,'./images/access/sponsors.jpg','./images/access/sponsors_h.jpg','./images/access/restricted2.jpg','./images/access/restricted2_h.jpg')">
     <form method="post" action="/portal/xt_login.asp" name="login">
         <div id="access_panel">
             <div id="panel_header"><img src="./images/trans_spacer.gif" width="1" height="100"/></div>
@@ -99,6 +99,9 @@
             <div class="sitelet"><a href="handler.ashx?section=london&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('london','','./images/access/london_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/london.jpg" name="london" width="410" height="51" border="0" id="london"></a></div>
             <% End If %>
 
+            <% If Session("MemberData").Item("restricted2") Then %>	
+            <div class="sitelet"><a href="handler.ashx?section=restricted2&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('restricted2','','./images/access/restricted2_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/restricted2.jpg" name="restricted2" width="410" height="51" border="0" id="restricted2"></a></div>
+            <% End If %>
             <div style="width:596px; text-align:center; font-size:12px; margin-top:-5px"><a href="/questionnaire.aspx" style="color:#6e6f71">Help! I'm having problems accessing one of the sites.</a></div>       
         </div>
         </form>

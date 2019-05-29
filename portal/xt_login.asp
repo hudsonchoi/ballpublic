@@ -321,6 +321,7 @@ Sub ProvideLuxuryService()
             Case "15" Session("MemberData").Item("playball") = True
 			Case "16" Session("MemberData").Item("sponsors") = True
             Case "17" Session("MemberData").Item("london") = True
+			Case "18" Session("MemberData").Item("restricted2") = True
 		    Case Else
 		End Select
         oRsLicenseeSitelets.MoveNext
@@ -368,6 +369,7 @@ Sub ProvideSuperiorService(ByRef myUID)
             Case "15" Session("MemberData").Item("playball") = True
 			Case "16" Session("MemberData").Item("sponsors") = True
             Case "17" Session("MemberData").Item("london") = True
+			Case "18" Session("MemberData").Item("restricted2") = True
 		    Case Else
 		End Select
         oRsLicenseeSitelets.MoveNext
@@ -417,6 +419,7 @@ Sub ProvideModerateService(ByRef myUID, ByRef myAllowedYear)
                 Case "15" Session("MemberData").Item("playball") = True
                 Case "16" Session("MemberData").Item("sponsors") = True
                 Case "17" Session("MemberData").Item("london") = True
+				Case "18" Session("MemberData").Item("restricted2") = True
 		        Case Else
 		    End Select
             oRsLicenseeSitelets.MoveNext
@@ -468,6 +471,7 @@ Sub ProvideGeneralService(ByRef myUID, ByRef myFromDate, ByRef myToDate)
                 Case "15" Session("MemberData").Item("playball") = True
                 Case "16" Session("MemberData").Item("sponsors") = True
 				Case "17" Session("MemberData").Item("london") = True
+				Case "18" Session("MemberData").Item("restricted2") = True
 		        Case Else
 		    End Select
             oRsLicenseeSitelets.MoveNext
