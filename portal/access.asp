@@ -37,14 +37,14 @@
 </script>
         <link href="./css/mlb.css?<%= Server.URLEncode(now) %>" rel="stylesheet" type="text/css">
     </head>
-    <body onLoad="MM_preloadImages('./images/access/marks18.jpg','./images/access/marks18_h.jpg','./images/access/marks16.jpg','./images/access/marks16_h.jpg','./images/access/marks17.jpg','./images/access/marks17_h.jpg','./images/access/spring.jpg','./images/access/spring_h.jpg','./images/access/opening.jpg','./images/access/opening_h.jpg','./images/access/all.jpg','./images/access/all_h.jpg','./images/access/post.jpg','./images/access/post_h.jpg','./images/access/coop.jpg','./images/access/coop_h.jpg','./images/access/mascot.jpg','./images/access/mascot_h.jpg','./images/access/minor.png','./images/access/minor_h.png','./images/access/marketing.jpg','./images/access/marketing_h.jpg','./images/access/restricted.jpg','./images/access/restricted_h.jpg','./images/access/playball.jpg','./images/access/playball_h.jpg','./images/access/london.jpg','./images/access/london_h.jpg',,'./images/access/sponsors.jpg','./images/access/sponsors_h.jpg')">
+    <body onLoad="MM_preloadImages('./images/access/marks18.jpg','./images/access/marks18_h.jpg','./images/access/marks16.jpg','./images/access/marks16_h.jpg','./images/access/marks17.jpg','./images/access/marks17_h.jpg','./images/access/spring.jpg','./images/access/spring_h.jpg','./images/access/opening.jpg','./images/access/opening_h.jpg','./images/access/all.jpg','./images/access/all_h.jpg','./images/access/post.jpg','./images/access/post_h.jpg','./images/access/coop.jpg','./images/access/coop_h.jpg','./images/access/mascot.jpg','./images/access/mascot_h.jpg','./images/access/minor.png','./images/access/minor_h.png','./images/access/restricted.jpg','./images/access/restricted_h.jpg','./images/access/playball.jpg','./images/access/playball_h.jpg','./images/access/london.jpg','./images/access/london_h.jpg',,'./images/access/sponsors.jpg','./images/access/sponsors_h.jpg')">
     <form method="post" action="/portal/xt_login.asp" name="login">
         <div id="access_panel">
             <div id="panel_header"><img src="./images/trans_spacer.gif" width="1" height="100"/></div>
             <% REM ATTENTION! ATTENTION! ATTENTION!
-               REM When launching 2019 replace the below to Session("MemberData").Item("mlb2019") %>
-		     <% If Session("MemberData").Item("mlb2018") Then %> 
-            <div class="sitelet"><a href="handler.ashx?section=mlb2018&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks18_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks18.jpg" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
+               REM When launching 2020 replace the below to Session("MemberData").Item("mlb2020") %>
+		    <% If Session("MemberData").Item("mlb2019") Then %> 
+            <div class="sitelet"><a href="handler.ashx?section=mlb2019&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks19_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks19.jpg" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
             <% End If%>
 
             <% If Session("MemberData").Item("spring") Then %>
@@ -52,7 +52,7 @@
             <% End If %>
 
             <% If Session("MemberData").Item("opening") Then %>
-            <div class="sitelet"><a href="handler.ashx?section=opening&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('openingday','','./images/access/opening_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/opening.jpg" name="openingday" width="410" height="51" border="0" id="openingday"></a></div>
+            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=opening&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('openingday','','./images/access/opening_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/opening.jpg" name="openingday" width="410" height="51" border="0" id="openingday"></a></div>
             <% End If %>
 
             <% If Session("MemberData").Item("alls") Then %>
@@ -74,10 +74,6 @@
             <% If Session("MemberData").Item("minor") Then %>
             <div class="sitelet"><a href="handler.ashx?section=minor&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('minor','','./images/access/minor_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/minor.png" name="minor" width="410" height="51" border="0" id="minor"></a></div>
             <% End If %>
-
-            <% If Session("MemberData").Item("marketing") Then %>	
-            <div class="sitelet"><a href="handler.ashx?section=club&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('marketing','','./images/access/marketing_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marketing.jpg" name="marketing" width="410" height="51" border="0" id="marketing"></a></div>
-            <% End If %>
             
             <% If Session("MemberData").Item("mascotbabies") Then %>	
             <div class="sitelet"><a href="handler.ashx?section=mascotbabies&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('mascotbabies','','./images/access/mascotbabies_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/mascotbabies.png" name="mascotbabies" width="410" height="51" border="0" id="mascotbabies"></a></div>
@@ -96,11 +92,11 @@
             <% End If %>
 
             <% If Session("MemberData").Item("sponsors") Then %>	
-            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=sponsors&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('sponsors','','./images/access/sponsors_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/sponsors.jpg" name="sponsors" width="410" height="51" border="0" id="sponsors"></a></div>
+            <div class="sitelet"><a href="handler.ashx?section=sponsors&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('sponsors','','./images/access/sponsors_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/sponsors.jpg" name="sponsors" width="410" height="51" border="0" id="sponsors"></a></div>
             <% End If %>
 			
             <% If Session("MemberData").Item("london") Then %>	
-            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=london&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('london','','./images/access/london_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/london.jpg" name="london" width="410" height="51" border="0" id="london"></a></div>
+            <div class="sitelet"><a href="handler.ashx?section=london&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('london','','./images/access/london_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/london.jpg" name="london" width="410" height="51" border="0" id="london"></a></div>
             <% End If %>
 
             <div style="width:596px; text-align:center; font-size:12px; margin-top:-5px"><a href="/questionnaire.aspx" style="color:#6e6f71">Help! I'm having problems accessing one of the sites.</a></div>       

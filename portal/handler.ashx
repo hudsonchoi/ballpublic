@@ -13,7 +13,16 @@ public class Handler : IHttpHandler, IRequiresSessionState {
 
 
         if ((context.Request.QueryString["section"] != null)&&(context.Request.QueryString["email"] != null)&&(context.Request.QueryString["guid"] != null)){
-            if (context.Request.QueryString["section"] == "mlb2018")
+            if (context.Request.QueryString["section"] == "mlb2019")
+            {
+                if (context.Session["mlb_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["mlb_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://clubmarks.mlbstyleguide.com/sitelet/2019?token=" + context.Request.QueryString["guid"]);
+            }
+			else if (context.Request.QueryString["section"] == "mlb2018")
             {
                 if (context.Session["mlb_login"] == null)
                 {
@@ -22,15 +31,6 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://clubmarks.mlbstyleguide.com/sitelet/2018?token=" + context.Request.QueryString["guid"]);
             }
-			else if (context.Request.QueryString["section"] == "mlb2017")
-            {
-                if (context.Session["mlb_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["mlb_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://clubmarks.mlbstyleguide.com/sitelet/2017?token=" + context.Request.QueryString["guid"]);
-            }
             else if (context.Request.QueryString["section"] == "spring")
             {
                 if (context.Session["spring_login"] == null)
@@ -38,7 +38,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     LogThisLogin(context);
                     context.Session["spring_login"] = "true";
                 }
-                context.Response.Redirect("frameset.asp?target=https://springtraining.mlbstyleguide.com/sitelet/2017?token=" + context.Request.QueryString["guid"]);
+                context.Response.Redirect("frameset.asp?target=https://springtraining.mlbstyleguide.com/sitelet/2019?token=" + context.Request.QueryString["guid"]);
 
             }
             else if (context.Request.QueryString["section"] == "opening")
@@ -48,7 +48,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     LogThisLogin(context);
                     context.Session["opening_login"] = "true";
                 }
-                context.Response.Redirect("frameset.asp?target=https://openingday.mlbstyleguide.com/sitelet/2017?token=" + context.Request.QueryString["guid"]);
+                context.Response.Redirect("frameset.asp?target=https://openingday.mlbstyleguide.com/sitelet/2019?token=" + context.Request.QueryString["guid"]);
             }
             else if (context.Request.QueryString["section"] == "alls")
             {
@@ -57,70 +57,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     LogThisLogin(context);
                     context.Session["alls_login"] = "true";
                 }
-                context.Response.Redirect("frameset.asp?target=https://allstargame.mlbstyleguide.com/sitelet/2017?token=" + context.Request.QueryString["guid"]);
-            }
-            else if (context.Request.QueryString["section"] == "alls2016")
-            {
-                if (context.Session["alls_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["alls_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://allstargame.mlbstyleguide.com/sitelet/2016?token=" + context.Request.QueryString["guid"]);
-            }
-            else if (context.Request.QueryString["section"] == "alls2015")
-            {
-                if (context.Session["alls_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["alls_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://allstargame.mlbstyleguide.com/sitelet/2015?token=" + context.Request.QueryString["guid"]);
-            }
-            else if (context.Request.QueryString["section"] == "alls2014")
-            {
-                if (context.Session["alls_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["alls_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://allstargame.mlbstyleguide.com/sitelet/2014?token=" + context.Request.QueryString["guid"]);
-            }
-            else if (context.Request.QueryString["section"] == "alls2013")
-            {
-                if (context.Session["alls_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["alls_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://allstargame.mlbstyleguide.com/sitelet/2013?token=" + context.Request.QueryString["guid"]);
-            }
-            else if (context.Request.QueryString["section"] == "world2013")
-            {
-                if (context.Session["world_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["world_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://postseason.mlbstyleguide.com/sitelet/2013?token=" + context.Request.QueryString["guid"]);
-            }
-            else if (context.Request.QueryString["section"] == "world2014")
-            {
-                if (context.Session["world_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["world_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://postseason.mlbstyleguide.com/sitelet/2014?token=" + context.Request.QueryString["guid"]);
-            }
-            else if (context.Request.QueryString["section"] == "world2015")
-            {
-                if (context.Session["world_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["world_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://postseason.mlbstyleguide.com/sitelet/2015?token=" + context.Request.QueryString["guid"]);
+                context.Response.Redirect("frameset.asp?target=https://allstargame.mlbstyleguide.com/sitelet/2019?token=" + context.Request.QueryString["guid"]);
             }
             else if (context.Request.QueryString["section"] == "world")
             {
@@ -129,7 +66,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     LogThisLogin(context);
                     context.Session["world_login"] = "true";
                 }
-                context.Response.Redirect("frameset.asp?target=https://postseason.mlbstyleguide.com/sitelet/2016?token=" + context.Request.QueryString["guid"]);
+                context.Response.Redirect("frameset.asp?target=https://postseason.mlbstyleguide.com/sitelet/2018?token=" + context.Request.QueryString["guid"]);
             }
             else if (context.Request.QueryString["section"] == "coop")
             {
@@ -156,7 +93,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     LogThisLogin(context);
                     context.Session["minor_login"] = "true";
                 }
-                context.Response.Redirect("frameset.asp?target=https://minorleague.mlbstyleguide.com/sitelet/2015?token=" + context.Request.QueryString["guid"]);
+                context.Response.Redirect("frameset.asp?target=https://minorleague.mlbstyleguide.com/sitelet/2018?token=" + context.Request.QueryString["guid"]);
             }
             else if (context.Request.QueryString["section"] == "club")
             {
