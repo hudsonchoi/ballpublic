@@ -167,6 +167,15 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://restricteddownload2.mlbstyleguide.com/sitelet/2019?token=" + context.Request.QueryString["guid"]);
             }
+			else if (context.Request.QueryString["section"] == "restricted3")
+            {
+                if (context.Session["restricted3_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["restricted3_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://restricteddownload3.mlbstyleguide.com/sitelet/2019?token=" + context.Request.QueryString["guid"]);
+            }
         }
 
     }
