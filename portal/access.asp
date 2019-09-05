@@ -44,7 +44,7 @@
             <% REM ATTENTION! ATTENTION! ATTENTION!
                REM When launching 2021 replace the below to Session("MemberData").Item("mlb2021") %>
 		    <% If Session("MemberData").Item("mlb2020") Then %> 
-            <div class="sitelet"><a href="handler.ashx?section=mlb2020&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks20_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks20.jpg" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
+            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=mlb2020&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks20_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks20.jpg" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
             <% End If%>
 
 		    <% If Session("MemberData").Item("mlb2019") Then %> 
@@ -60,7 +60,7 @@
             <% End If %>
 
             <% If Session("MemberData").Item("alls") Then %>
-            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=alls&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>"" target="_top" onMouseOver="MM_swapImage('allstar','','./images/access/all_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/all.jpg" name="allstar" width="410" height="51" border="0" id="allstar"></a></div>
+            <div class="sitelet"><a href="handler.ashx?section=alls&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>"" target="_top" onMouseOver="MM_swapImage('allstar','','./images/access/all_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/all.jpg" name="allstar" width="410" height="51" border="0" id="allstar"></a></div>
             <% End If %>
 
             <% If Session("MemberData").Item("world") Then %>
