@@ -183,7 +183,8 @@ myCountry = Legacy.Item("Country")
                 <tr> 
                   <td nowrap align="right" bgcolor="#464646"><font size="1" face="Arial, Helvetica, sans-serif" <%if UserReEntryErrors.item("Email") = "flag" then response.write("color=red") else response.write("color=CC9900") end if %>>Email*:</font></td>
                   <td nowrap bgcolor="#464646"><font size="2" face="Arial, Helvetica, sans-serif"> 
-                    <input type="text" name="Email" size="20" value="<%Response.Write(UserReEntryData.Item("Email"))%>">
+                     <%=Base64Decode(Session("CompanyEmail"))%>
+		     <input type="hidden" name="Email" value="<%=Base64Decode(Session("CompanyEmail"))%>">
                     </font></td>
                 </tr>
                 <tr> 
@@ -340,3 +341,30 @@ myCountry = Legacy.Item("Country")
 <% end if %>
 </body>
  </html>
+<%
+Function Base64Decode(ByVal vCode)
+    Dim oXML, oNode
+    Set oXML = CreateObject("Msxml2.DOMDocument.3.0")
+    Set oNode = oXML.CreateElement("base64")
+    oNode.dataType = "bin.base64"
+    oNode.text = vCode
+    Base64Decode = Stream_BinaryToString(oNode.nodeTypedValue)
+    Set oNode = Nothing
+    Set oXML = Nothing
+End Function
+
+Private Function Stream_BinaryToString(Binary)
+  Const adTypeText = 2
+  Const adTypeBinary = 1
+  Dim BinaryStream 'As New Stream
+  Set BinaryStream = CreateObject("ADODB.Stream")
+  BinaryStream.Type = adTypeBinary
+  BinaryStream.Open
+  BinaryStream.Write Binary
+  BinaryStream.Position = 0
+  BinaryStream.Type = adTypeText
+  BinaryStream.CharSet = "us-ascii"
+  Stream_BinaryToString = BinaryStream.ReadText
+  Set BinaryStream = Nothing
+End Function
+%>

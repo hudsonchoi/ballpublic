@@ -130,6 +130,7 @@ If oRs.RecordCount > 0 Then 'When the user is the legacy users
 		Set oConn = Nothing
 	
 		myTarget="reregister.asp"
+		Session("CompanyEmail") = Request.Form("ce")
 	'end if
 Else 'Look up in licensee
 	Session("UserReEntryErrors").removeAll
@@ -150,7 +151,7 @@ Else 'Look up in licensee
 	oRs.Close
 	sSQL = "select * from licensee where Password='"&Replace(Request.Form("Password"),"'", "''") & "' and Email = '" & Replace(Request.Form("UserName"),"'","''") & "'"
 	oRs.Open sSQL, oConn, adOpenStatic, adLockPessimistic, adCmdText
-	If oRs.RecordCount = 1 Then 'When the user is valid
+	If oRs.RecordCount > 0 Then 'When the user is valid
 	    myUID = oRs("ID")
 		myFirstName = oRs("FirstName") 
 		myLastName = oRs("LastName")
@@ -274,7 +275,7 @@ Else 'Look up in licensee
 		End If
 
 	Else
-		myTarget="/default.asp?c=invalid"
+		myTarget="/default.asp?c=invalid&ce="&Request.Form("ce")
 	End If
 End If
 
@@ -342,7 +343,7 @@ Sub ProvideSuperiorService(ByRef myUID)
 		    Case "1" Session("MemberData").Item("mlb2019") = True
                      REM ATTENTION! ATTENTION! ATTENTION!
                      REM When launching 2021 add Session("MemberData").Item("mlb2020") = True above!
-		             If Now > DateValue("1/1/20") Then 'And change the date left to '1/1/21'
+		             If Now > DateValue("12/4/19") Then 'And change the date left to '1/1/21'
 		                REM ATTENTION! ATTENTION! ATTENTION!
                         REM When launching 2021 replace the below to Session("MemberData").Item("mlb2021") = True!
 		                Session("MemberData").Item("mlb2020") = True
