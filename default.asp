@@ -63,7 +63,6 @@
                 </td></tr>
             </table>
         </div>
-	<input type="hidden" name="ce" value="<%=Request.QueryString("ce")%>">
         </form>
 
     </body>

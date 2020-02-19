@@ -130,7 +130,6 @@ If oRs.RecordCount > 0 Then 'When the user is the legacy users
 		Set oConn = Nothing
 	
 		myTarget="reregister.asp"
-		Session("CompanyEmail") = Request.Form("ce")
 	'end if
 Else 'Look up in licensee
 	Session("UserReEntryErrors").removeAll
@@ -275,7 +274,7 @@ Else 'Look up in licensee
 		End If
 
 	Else
-		myTarget="/default.asp?c=invalid&ce="&Request.Form("ce")
+		myTarget="/default.asp?c=invalid"
 	End If
 End If
 
