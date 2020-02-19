@@ -1,6 +1,8 @@
 <%@ Language=VBScript %>
 <!--#include virtual = "/includes/validate_portal.inc" -->
 <%
+on error resume next
+
 Dim Legacy, myBulkReg, myAddress1, myAddress2, myCity, myState, myZip, myCountry
 Set UserReEntryErrors = Session("UserReEntryErrors")
 Set UserReEntryData = Session("UserReEntryData")
@@ -319,7 +321,15 @@ myCountry = Legacy.Item("Country")
                 <tr> 
                   <td nowrap bgcolor="#464646"><font size="1" face="Arial, Helvetica, sans-serif">&nbsp;</font></td>
                   <td nowrap bgcolor="#464646"><font face="Arial, Helvetica, sans-serif" size="2"> 
+		<%IF Err.Number = 0 THEN %>
                     <input type="submit" name="Submit" value="Register Me  &gt;&gt;&gt;">
+		<%Else%>
+	             <script type="text/javascript">
+			alert("Invalid access.. Please use the link in the invitation email.");
+			window.history.back();
+		     </script>
+		<%END IF%>
+
                     </font></td>
                 </tr>
               </table>
@@ -367,4 +377,5 @@ Private Function Stream_BinaryToString(Binary)
   Stream_BinaryToString = BinaryStream.ReadText
   Set BinaryStream = Nothing
 End Function
+
 %>
