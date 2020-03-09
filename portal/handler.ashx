@@ -176,7 +176,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://restricteddownload3.mlbstyleguide.com/sitelet/2019?token=" + context.Request.QueryString["guid"]);
             }
-            else if (context.Request.QueryString["section"] == "mlblogovalut")
+            else if (context.Request.QueryString["section"] == "mlblogovault")
             {
                 if (context.Session["mlblogovault_login"] == null)
                 {
@@ -203,7 +203,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
         string section = string.Empty;
         try
         {
-            if (context.Request.QueryString["section"].ToString().IndexOf("mlb") >= 0)
+            if (context.Request.QueryString["section"].ToString().IndexOf("mlb") >= 0 && context.Request.QueryString["section"].ToString() != "mlblogovault")
             {
                 section = "mlb";
             }
