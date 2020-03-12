@@ -183,7 +183,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     LogThisLogin(context);
                     context.Session["mlblogovault_login"] = "true";
                 }
-                context.Response.Redirect("frameset.asp?target=https://mlblogovault.mlbstyleguide.com/sitelet/2020?token=" + context.Request.QueryString["guid"]);
+                context.Response.Redirect("frameset.asp?target=https://mlblogovault.mlbstyleguide.com?token=" + context.Request.QueryString["guid"]);
             }
         }
 
