@@ -173,8 +173,8 @@ a.main:active {
     'images/gnav_06MinorLg_ON.gif','images/gnav_06MinorLg_RO.gif','images/gnav_06MinorLg_ONRO.gif',
     'images/gnav_06SprgTrain_ON.gif','images/gnav_06SprgTrain_RO.gif','images/gnav_06SprgTrain_ONRO.gif',
     'images/gnav_06openingday_ON.gif','images/gnav_06openingday_RO.gif','images/gnav_06openingday_ONRO.gif',
-    'images/gnav_19ClubMarks_ON.gif','images/gnav_19ClubMarks_RO.gif','images/gnav_19ClubMarks_ONRO.gif',
 	'images/gnav_20ClubMarks_ON.gif','images/gnav_20ClubMarks_RO.gif','images/gnav_20ClubMarks_ONRO.gif',
+    'images/gnav_21ClubMarks_ON.gif','images/gnav_21ClubMarks_RO.gif','images/gnav_21ClubMarks_ONRO.gif',
     'images/gnav_mascotbabies_ON.gif','images/gnav_mascotbabies_RO.gif','images/gnav_mascotbabies_ONRO.gif',
     'images/gnav_pressbox_ON.gif','images/gnav_pressbox_RO.gif,'images/gnav_pressbox_ONRO.gif',
     'images/gnav_playball_ON.gif','images/gnav_playball_RO.gif,'images/gnav_playball_ONRO.gif',
@@ -187,15 +187,15 @@ a.main:active {
         <tr> 
           <td><img src="images/nav_pipe.gif" width="2" height="22"></td>		  
 		  <%REM ATTENTION! ATTENTION! ATTENTION!
-            REM When launching 2021 replace the below to Session("MemberData").Item("mlb2021") %>
-		  <% If Session("MemberData").Item("mlb2020") Then %>
-		<td><a href="handler.ashx?section=mlb2020&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarksNew','images/gnav_20ClubMarks_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarksNew','images/gnav_20ClubMarks_RO.gif','images/gnav_20ClubMarks_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarksNew" src="images/gnav_20ClubMarks_OFF.gif" border="0" width="129" height="22"></a></td>
+            REM When launching 2022 replace the below to Session("MemberData").Item("mlb2022") %>
+		  <% If Session("MemberData").Item("mlb2021") Then %>
+		<td><a href="handler.ashx?section=mlb2021&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarksNew','images/gnav_21ClubMarks_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarksNew','images/gnav_21ClubMarks_RO.gif','images/gnav_21ClubMarks_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarksNew" src="images/gnav_21ClubMarks_OFF.gif" border="0" width="129" height="22"></a></td>
             <td><img src="images/nav_pipe.gif" width="2" height="22"></td>
         <% end if %>
         <%REM ATTENTION! ATTENTION! ATTENTION!
-            REM When launching 2021 replace the below to Session("MemberData").Item("mlb2020") AND update the button graphics%>
-        <% If Session("MemberData").Item("mlb2019") Then %>
-		<td><a href="handler.ashx?section=mlb2019&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarks','images/gnav_19ClubMarks_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarks','images/gnav_19ClubMarks_RO.gif','images/gnav_19ClubMarks_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarks" src="images/gnav_19ClubMarks_OFF.gif" border="0" width="129" height="22"></a></td>
+            REM When launching 2022 replace the below to Session("MemberData").Item("mlb2021") AND update the button graphics%>
+        <% If Session("MemberData").Item("mlb2020") Then %>
+		<td><a href="handler.ashx?section=mlb2020&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarks','images/gnav_20ClubMarks_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarks','images/gnav_20ClubMarks_RO.gif','images/gnav_20ClubMarks_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarks" src="images/gnav_20ClubMarks_OFF.gif" border="0" width="129" height="22"></a></td>
             <td><img src="images/nav_pipe.gif" width="2" height="22"></td>
         <% End If %>
 		
