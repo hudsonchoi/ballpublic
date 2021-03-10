@@ -93,7 +93,7 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     LogThisLogin(context);
                     context.Session["minor_login"] = "true";
                 }
-                context.Response.Redirect("frameset.asp?target=https://minorleague.mlbstyleguide.com/sitelet/2018?token=" + context.Request.QueryString["guid"]);
+                context.Response.Redirect("frameset.asp?target=https://minorleague.mlbstyleguide.com/sitelet/2021?token=" + context.Request.QueryString["guid"]);
             }
             else if (context.Request.QueryString["section"] == "club")
             {
