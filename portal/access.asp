@@ -46,10 +46,6 @@
 		    <% If Session("MemberData").Item("mlb2021") Then %> 
             <div class="sitelet"><a href="handler.ashx?section=mlb2021&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks21_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks21.png" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
             <% End If%>
-
-            <% If Session("MemberData").Item("mlb2020") Then %> 
-                <div class="sitelet"><a href="handler.ashx?section=mlb2020&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarks','','./images/access/marks20_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks20.jpg" name="clubmarks" width="410" height="51" border="0" id="clubmarks"/></a></div>
-            <% End If%>
 			
             <% If Session("MemberData").Item("spring") Then %>
             <div class="sitelet"><a href="handler.ashx?section=spring&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('spring','','./images/access/spring__h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/spring_.jpg" name="spring" width="410" height="51" border="0" id="spring"/></a></div>

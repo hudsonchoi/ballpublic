@@ -194,10 +194,6 @@ a.main:active {
         <% end if %>
         <%REM ATTENTION! ATTENTION! ATTENTION!
             REM When launching 2022 replace the below to Session("MemberData").Item("mlb2021") AND update the button graphics%>
-        <% If Session("MemberData").Item("mlb2020") Then %>
-		<td><a href="handler.ashx?section=mlb2020&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarks','images/gnav_20ClubMarks_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarks','images/gnav_20ClubMarks_RO.gif','images/gnav_20ClubMarks_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarks" src="images/gnav_20ClubMarks_OFF.gif" border="0" width="129" height="22"></a></td>
-            <td><img src="images/nav_pipe.gif" width="2" height="22"></td>
-        <% End If %>
 		
           <% If Session("MemberData").Item("spring") Then %>
           <td nowrap align="center"><a href="handler.ashx?section=spring&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onClick="MM_nbGroup('down','group1','spring','images/gnav_06SprgTrain_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','spring','images/gnav_06SprgTrain_RO.gif','images/gnav_06SprgTrain_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img src="images/gnav_06SprgTrain_OFF.gif" name="spring" width="73" height="22" border="0"></a></td>
