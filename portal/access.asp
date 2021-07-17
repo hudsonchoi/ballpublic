@@ -42,9 +42,13 @@
         <div id="access_panel">
             <div id="panel_header"><img src="./images/trans_spacer.gif" width="1" height="100"/></div>
             <% REM ATTENTION! ATTENTION! ATTENTION!
-               REM When launching 2021 replace the below to Session("MemberData").Item("mlb2021") %>
-		    <% If Session("MemberData").Item("mlb2021") Then %> 
-            <div class="sitelet"><a href="handler.ashx?section=mlb2021&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks21_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks21.png" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
+               REM When launching 2023 replace the below to Session("MemberData").Item("mlb2023") %>
+		     <% If Session("MemberData").Item("mlb2022") Then %> 
+            <div class="sitelet"><a href="handler.ashx?section=mlb2022&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks22_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks22.png" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
+            <% End If%>
+
+            <% If Session("MemberData").Item("mlb2021") Then %> 
+            <div class="sitelet"><a href="handler.ashx?section=mlb2021&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarks','','./images/access/marks21_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks21.png" name="clubmarks" width="410" height="51" border="0" id="clubmarks"/></a></div>
             <% End If%>
 			
             <% If Session("MemberData").Item("spring") Then %>
