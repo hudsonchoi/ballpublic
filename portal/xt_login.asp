@@ -345,7 +345,7 @@ Sub ProvideSuperiorService(ByRef myUID)
 		    Case "1" Session("MemberData").Item("mlb2021") = True
                      REM ATTENTION! ATTENTION! ATTENTION!
                      REM When launching 2023 add Session("MemberData").Item("mlb2022") = True above!
-		             If Now > DateValue("1/1/22") Then 'And change the date left to '1/1/23'
+		             If Now > DateValue("8/13/21") Then 'And change the date left to '1/1/23'
 		                REM ATTENTION! ATTENTION! ATTENTION!
                         REM When launching 2023 replace the below to Session("MemberData").Item("mlb2023") = True!
 		                Session("MemberData").Item("mlb2022") = True
@@ -399,7 +399,7 @@ Sub ProvideModerateService(ByRef myUID, ByRef myAllowedYear)
 		        Case "1" Session("MemberData").Item("mlb2021") = True
 		             REM ATTENTION! ATTENTION! ATTENTION!
                      REM When launching 2023 add Session("MemberData").Item("mlb2022") = True above!
-		             If Now > DateValue("1/1/22") Then 'And change the date left to '1/1/23'
+		             If Now > DateValue("8/13/21") Then 'And change the date left to '1/1/23'
 		                REM ATTENTION! ATTENTION! ATTENTION!
                         REM When launching 2023 replace the below to Session("MemberData").Item("mlb2023") = True!
 		                Session("MemberData").Item("mlb2022") = True
@@ -455,7 +455,7 @@ Sub ProvideGeneralService(ByRef myUID, ByRef myFromDate, ByRef myToDate)
 		        Case "1" Session("MemberData").Item("mlb2021") = True
 		             REM ATTENTION! ATTENTION! ATTENTION!
                      REM When launching 2023 add Session("MemberData").Item("mlb2022") = True above!
-		             If Now > DateValue("1/1/22") Then 'And change the date left to '1/1/23'
+		             If Now > DateValue("8/13/21") Then 'And change the date left to '1/1/23'
 		                REM ATTENTION! ATTENTION! ATTENTION!
                         REM When launching 2023 replace the below to Session("MemberData").Item("mlb2023") = True!
 		                Session("MemberData").Item("mlb2022") = True
