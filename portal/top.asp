@@ -173,8 +173,8 @@ a.main:active {
     'images/gnav_06MinorLg_ON.gif','images/gnav_06MinorLg_RO.gif','images/gnav_06MinorLg_ONRO.gif',
     'images/gnav_06SprgTrain_ON.gif','images/gnav_06SprgTrain_RO.gif','images/gnav_06SprgTrain_ONRO.gif',
     'images/gnav_06openingday_ON.gif','images/gnav_06openingday_RO.gif','images/gnav_06openingday_ONRO.gif',
-    'images/gnav_21ClubMarks_ON.gif','images/gnav_21ClubMarks_RO.gif','images/gnav_21ClubMarks_ONRO.gif',
     'images/gnav_22ClubMarks_ON.gif','images/gnav_22ClubMarks_RO.gif','images/gnav_22ClubMarks_ONRO.gif',
+	'images/gnav_23ClubMarks_ON.png','images/gnav_23ClubMarks_RO.png','images/gnav_23ClubMarks_ONRO.png',
     'images/gnav_mascotbabies_ON.gif','images/gnav_mascotbabies_RO.gif','images/gnav_mascotbabies_ONRO.gif',
     'images/gnav_pressbox_ON.gif','images/gnav_pressbox_RO.gif,'images/gnav_pressbox_ONRO.gif',
     'images/gnav_playball_ON.gif','images/gnav_playball_RO.gif,'images/gnav_playball_ONRO.gif',
@@ -187,15 +187,15 @@ a.main:active {
         <tr> 
           <td><img src="images/nav_pipe.gif" width="2" height="22"></td>		  
 		 <%REM ATTENTION! ATTENTION! ATTENTION!
-            REM When launching 2023 replace the below to Session("MemberData").Item("mlb2023") %>
-		 <% If Session("MemberData").Item("mlb2022") Then %>
-		    <td><a href="handler.ashx?section=mlb2022&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarksNew','images/gnav_22ClubMarks_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarksNew','images/gnav_22ClubMarks_RO.gif','images/gnav_22ClubMarks_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarksNew" src="images/gnav_22ClubMarks_OFF.gif" border="0" width="129" height="22"></a></td>
+            REM When launching 2024 replace the below to Session("MemberData").Item("mlb2024") %>
+		 <% If Session("MemberData").Item("mlb2023") Then %>
+		    <td><a href="handler.ashx?section=mlb2023&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarksNew','images/gnav_23ClubMarks_ON.png',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarksNew','images/gnav_23ClubMarks_RO.png','images/gnav_23ClubMarks_ONRO.png',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarksNew" src="images/gnav_23ClubMarks_OFF.png" border="0" width="129" height="22"></a></td>
             <td><img src="images/nav_pipe.gif" width="2" height="22"></td>
          <% end if %>
          <%REM ATTENTION! ATTENTION! ATTENTION!
-            REM When launching 2023 replace the below to Session("MemberData").Item("mlb2022") AND update the button graphics%>
-         <% If Session("MemberData").Item("mlb2021") Then %>
-            <td><a href="handler.ashx?section=mlb2021&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarks','images/gnav_21ClubMarks_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarks','images/gnav_21ClubMarks_RO.gif','images/gnav_21ClubMarks_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarks" src="images/gnav_21ClubMarks_OFF.gif" border="0" width="129" height="22"></a></td>
+            REM When launching 2024 replace the below to Session("MemberData").Item("mlb2023") AND update the button graphics%>
+         <% If Session("MemberData").Item("mlb2022") Then %>
+            <td><a href="handler.ashx?section=mlb2022&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top"  onClick="MM_nbGroup('down','group1','clubmarks','images/gnav_22ClubMarks_ON.gif',1);if(this.blur)this.blur();MM_showHideLayers('allsarchive','','hide')" onMouseOver="MM_nbGroup('over','clubmarks','images/gnav_22ClubMarks_RO.gif','images/gnav_22ClubMarks_ONRO.gif',1)" onMouseOut="MM_nbGroup('out')"><img name="clubmarks" src="images/gnav_22ClubMarks_OFF.gif" border="0" width="129" height="22"></a></td>
             <td><img src="images/nav_pipe.gif" width="2" height="22"></td>
          <% End If %>        		
          <% If Session("MemberData").Item("spring") Then %>

@@ -37,18 +37,18 @@
 </script>
         <link href="./css/mlb.css?<%= Server.URLEncode(now) %>" rel="stylesheet" type="text/css">
     </head>
-    <body onLoad="MM_preloadImages('./images/access/marks20_h.jpg','./images/access/marks20.jpg','./images/access/marks21_h.png','./images/access/marks21.png','./images/access/spring_.jpg','./images/access/spring__h.jpg','./images/access/opening.jpg','./images/access/opening_h.jpg','./images/access/all.jpg','./images/access/all_h.jpg','./images/access/post.jpg','./images/access/post_h.jpg','./images/access/coop.jpg','./images/access/coop_h.jpg','./images/access/mascot.jpg','./images/access/mascot_h.jpg','./images/access/minor.png','./images/access/minor_h.png','./images/access/restricted.jpg','./images/access/restricted_h.jpg','./images/access/playball.jpg','./images/access/playball_h.jpg','./images/access/london.jpg','./images/access/london_h.jpg',,'./images/access/sponsors.jpg','./images/access/sponsors_h.jpg','./images/access/little_league.jpg','./images/access/little_league_h.jpg','./images/access/restricted3.jpg','./images/access/restricted3_h.jpg','./images/access/mlblogovault.jpg','./images/access/mlblogovault_h.jpg')">
+    <body onLoad="MM_preloadImages('./images/access/marks22_h.jpg','./images/access/marks22.jpg','./images/access/marks23_h.png','./images/access/marks23.png','./images/access/spring_.jpg','./images/access/spring__h.jpg','./images/access/opening.jpg','./images/access/opening_h.jpg','./images/access/all.jpg','./images/access/all_h.jpg','./images/access/post.jpg','./images/access/post_h.jpg','./images/access/coop.jpg','./images/access/coop_h.jpg','./images/access/mascot.jpg','./images/access/mascot_h.jpg','./images/access/minor.png','./images/access/minor_h.png','./images/access/restricted.jpg','./images/access/restricted_h.jpg','./images/access/playball.jpg','./images/access/playball_h.jpg','./images/access/london.jpg','./images/access/london_h.jpg',,'./images/access/sponsors.jpg','./images/access/sponsors_h.jpg','./images/access/little_league.jpg','./images/access/little_league_h.jpg','./images/access/restricted3.jpg','./images/access/restricted3_h.jpg','./images/access/mlblogovault.jpg','./images/access/mlblogovault_h.jpg')">
     <form method="post" action="/portal/xt_login.asp" name="login">
         <div id="access_panel">
             <div id="panel_header"><img src="./images/trans_spacer.gif" width="1" height="100"/></div>
             <% REM ATTENTION! ATTENTION! ATTENTION!
-               REM When launching 2023 replace the below to Session("MemberData").Item("mlb2023") %>
-		     <% If Session("MemberData").Item("mlb2022") Then %> 
-            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=mlb2022&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks22_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks22.png" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
+               REM When launching 2024 replace the below to Session("MemberData").Item("mlb2024") %>
+		     <% If Session("MemberData").Item("mlb2023") Then %> 
+            <div class="sitelet"><div class="new"><img src="./images/access/new.png" /></div><a href="handler.ashx?section=mlb2023&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarksNew','','./images/access/marks23_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks23.png" name="clubmarksNew" width="410" height="51" border="0" id="clubmarksNew"/></a></div>
             <% End If%>
 
-            <% If Session("MemberData").Item("mlb2021") Then %> 
-            <div class="sitelet"><a href="handler.ashx?section=mlb2021&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarks','','./images/access/marks21_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks21.png" name="clubmarks" width="410" height="51" border="0" id="clubmarks"/></a></div>
+            <% If Session("MemberData").Item("mlb2022") Then %> 
+            <div class="sitelet"><a href="handler.ashx?section=mlb2022&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarks','','./images/access/marks22_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks22.png" name="clubmarks" width="410" height="51" border="0" id="clubmarks"/></a></div>
             <% End If%>
 			
             <% If Session("MemberData").Item("spring") Then %>
