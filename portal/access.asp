@@ -88,7 +88,7 @@
             <% End If %>
 
            <% If Session("MemberData").Item("restricted") Then %>	
-            <div class="sitelet"><a href="handler.ashx?section=restricted&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('restricted','','./images/access/restricted_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/restricted.jpg" name="restricted" width="410" height="51" border="0" id="restricted"></a></div>
+            <div class="sitelet"><a href="handler.ashx?section=restricted&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('restricted','','./images/access/restricted_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/restricted.png" name="restricted" width="410" height="51" border="0" id="restricted"></a></div>
             <% End If %>
 
             <% If Session("MemberData").Item("playball") Then %>	
@@ -108,7 +108,7 @@
             <% End If %>
 			
 			<% If Session("MemberData").Item("restricted3") Then %>	
-            <div class="sitelet"><a href="handler.ashx?section=restricted3&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('restricted3','','./images/access/restrictedMexico_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/restrictedMexico.jpg" name="restricted3" width="410" height="51" border="0" id="restricted3"></a></div>
+            <div class="sitelet"><a href="handler.ashx?section=restricted3&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('restricted3','','./images/access/restricted3_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/restricted3.jpg" name="restricted3" width="410" height="51" border="0" id="restricted3"></a></div>
             <% End If %>
 
             <% If Session("MemberData").Item("mlblogovault") Then %>	
