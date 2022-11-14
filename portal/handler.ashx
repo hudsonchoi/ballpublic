@@ -185,6 +185,33 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://mlblogovault.mlbstyleguide.com/sitelet/2021?token=" + context.Request.QueryString["guid"]);
             }
+            else if (context.Request.QueryString["section"] == "allscp")
+            {
+                if (context.Session["allscp_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["allscp_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://allstargamecp.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
+            }
+            else if (context.Request.QueryString["section"] == "openingcp")
+            {
+                if (context.Session["openingcp_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["openingcp_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://openingdaycp.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
+            }
+            else if (context.Request.QueryString["section"] == "springcp")
+            {
+                if (context.Session["springcp_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["springcp_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://springtrainingcp.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
+            }
         }
 
     }
@@ -206,10 +233,6 @@ public class Handler : IHttpHandler, IRequiresSessionState {
             if (context.Request.QueryString["section"].ToString().IndexOf("mlb") >= 0 && context.Request.QueryString["section"].ToString() != "mlblogovault")
             {
                 section = "mlb";
-            }
-            else if (context.Request.QueryString["section"].ToString().IndexOf("alls") >= 0)
-            {
-                section = "alls";
             }
             else
             {
