@@ -328,9 +328,10 @@ Sub ProvideLuxuryService()
 			Case "18" Session("MemberData").Item("restricted2") = True
 			Case "19" Session("MemberData").Item("restricted3") = True
             Case "20" Session("MemberData").Item("mlblogovault") = True
-            Case "21" Session("MemberData").Item("allscp") = True
-            Case "22" Session("MemberData").Item("openingcp") = True
-            Case "23" Session("MemberData").Item("springcp") = True
+            Case "21" Session("MemberData").Item("restricted4") = True
+            Case "22" Session("MemberData").Item("allscp") = True
+            Case "23" Session("MemberData").Item("openingcp") = True
+            Case "24" Session("MemberData").Item("springcp") = True
 		    Case Else
 		End Select
         oRsLicenseeSitelets.MoveNext
@@ -384,9 +385,10 @@ Sub ProvideSuperiorService(ByRef myUID)
 			Case "18" Session("MemberData").Item("restricted2") = True
 			Case "19" Session("MemberData").Item("restricted3") = True
             Case "20" Session("MemberData").Item("mlblogovault") = True
-            Case "21" Session("MemberData").Item("allscp") = True
-            Case "22" Session("MemberData").Item("openingcp") = True
-            Case "23" Session("MemberData").Item("springcp") = True
+            Case "21" Session("MemberData").Item("restricted4") = True
+            Case "22" Session("MemberData").Item("allscp") = True
+            Case "23" Session("MemberData").Item("openingcp") = True
+            Case "24" Session("MemberData").Item("springcp") = True
 		    Case Else
 		End Select
         oRsLicenseeSitelets.MoveNext
@@ -442,9 +444,10 @@ Sub ProvideModerateService(ByRef myUID, ByRef myAllowedYear)
 				Case "18" Session("MemberData").Item("restricted2") = True
 				Case "19" Session("MemberData").Item("restricted3") = True
                 Case "20" Session("MemberData").Item("mlblogovault") = True
-                Case "21" Session("MemberData").Item("allscp") = True
-                Case "22" Session("MemberData").Item("openingcp") = True
-                Case "23" Session("MemberData").Item("springcp") = True
+                Case "21" Session("MemberData").Item("restricted4") = True
+                Case "22" Session("MemberData").Item("allscp") = True
+                Case "23" Session("MemberData").Item("openingcp") = True
+                Case "24" Session("MemberData").Item("springcp") = True
 		        Case Else
 		    End Select
             oRsLicenseeSitelets.MoveNext
@@ -505,6 +508,10 @@ Sub ProvideGeneralService(ByRef myUID, ByRef myFromDate, ByRef myToDate)
                 Case "21" Session("MemberData").Item("allscp") = True
                 Case "22" Session("MemberData").Item("openingcp") = True
                 Case "23" Session("MemberData").Item("springcp") = True
+                Case "21" Session("MemberData").Item("restricted4") = True
+                Case "22" Session("MemberData").Item("allscp") = True
+                Case "23" Session("MemberData").Item("openingcp") = True
+                Case "24" Session("MemberData").Item("springcp") = True
 		        Case Else
 		    End Select
             oRsLicenseeSitelets.MoveNext

@@ -185,6 +185,15 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://mlblogovault.mlbstyleguide.com/sitelet/2021?token=" + context.Request.QueryString["guid"]);
             }
+            else if (context.Request.QueryString["section"] == "restricted4")
+            {
+                if (context.Session["restricted4_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["restricted4_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://restricteddownload4.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
+            }
             else if (context.Request.QueryString["section"] == "allscp")
             {
                 if (context.Session["allscp_login"] == null)
