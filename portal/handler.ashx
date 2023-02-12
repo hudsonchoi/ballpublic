@@ -221,6 +221,15 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://springtrainingcp.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
             }
+			else if (context.Request.QueryString["section"] == "worldcp")
+            {
+                if (context.Session["worldcp_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["worldcp_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://postseasoncp.mlbstyleguide.com/sitelet/2023?token=" + context.Request.QueryString["guid"]);
+            }
         }
 
     }
