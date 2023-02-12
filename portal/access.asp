@@ -119,20 +119,20 @@
             <div class="sitelet"><a href="handler.ashx?section=restricted4&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('restricted4','','./images/access/restricted4_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/restricted4.jpg" name="restricted4" width="410" height="51" border="0" id="restricted4"></a></div>
             <% End If %>
 
-            <% If Session("MemberData").Item("allscp") Then %>	
-            <div class="sitelet"><a href="handler.ashx?section=allscp&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('allscp','','./images/access/allss_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/allss.png" name="allscp" width="410" height="51" border="0" id="allscp"></a></div>
+            <% If Session("MemberData").Item("allssp") Then %>	
+            <div class="sitelet"><a href="handler.ashx?section=allssp&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('allssp','','./images/access/allss_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/allss.png" name="allssp" width="410" height="51" border="0" id="allscp"></a></div>
             <% End If %>
 
-            <% If Session("MemberData").Item("openingcp") Then %>	
-            <div class="sitelet"><a href="handler.ashx?section=openingcp&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('openingcp','','./images/access/openings_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/openings.png" name="openingcp" width="410" height="51" border="0" id="openingcp"></a></div>
+            <% If Session("MemberData").Item("openingsp") Then %>	
+            <div class="sitelet"><a href="handler.ashx?section=openingsp&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('openingsp','','./images/access/openings_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/openings.png" name="openingsp" width="410" height="51" border="0" id="openingcp"></a></div>
             <% End If %>
 
-            <% If Session("MemberData").Item("springcp") Then %>	
-            <div class="sitelet"><a href="handler.ashx?section=springcp&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('springcp','','./images/access/springs_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/springs.png" name="springcp" width="410" height="51" border="0" id="springcp"></a></div>
+            <% If Session("MemberData").Item("springsp") Then %>	
+            <div class="sitelet"><a href="handler.ashx?section=springsp&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('springsp','','./images/access/springs_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/springs.png" name="springsp" width="410" height="51" border="0" id="springcp"></a></div>
             <% End If %>
 			
-			<% If Session("MemberData").Item("postseasoncp") Then %>	
-            <div class="sitelet"><a href="handler.ashx?section=postseasoncp&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('postseasoncp','','./images/access/posts_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/posts.png" name="postseasoncp" width="410" height="51" border="0" id="postseasoncp"></a></div>
+			<% If Session("MemberData").Item("worldsp") Then %>	
+            <div class="sitelet"><a href="handler.ashx?section=worldsp&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('postseasonsp','','./images/access/posts_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/posts.png" name="postseasonsp" width="410" height="51" border="0" id="postseasoncp"></a></div>
             <% End If %>
 			
             <div style="width:596px; text-align:center; font-size:12px; margin-top:-5px"><a href="/questionnaire.aspx" style="color:#6e6f71">Help! I'm having problems accessing one of the sites.</a></div>       
