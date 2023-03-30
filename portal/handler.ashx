@@ -194,39 +194,39 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://restricteddownload4.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
             }
-            else if (context.Request.QueryString["section"] == "allssp")
+            else if (context.Request.QueryString["section"] == "allsem")
             {
-                if (context.Session["allssp_login"] == null)
+                if (context.Session["allsem_login"] == null)
                 {
                     LogThisLogin(context);
-                    context.Session["allssp_login"] = "true";
+                    context.Session["allem_login"] = "true";
                 }
                 context.Response.Redirect("frameset.asp?target=https://allstargamesp.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
             }
-            else if (context.Request.QueryString["section"] == "openingsp")
+            else if (context.Request.QueryString["section"] == "openingem")
             {
-                if (context.Session["openingsp_login"] == null)
+                if (context.Session["openingem_login"] == null)
                 {
                     LogThisLogin(context);
-                    context.Session["openingsp_login"] = "true";
+                    context.Session["openingem_login"] = "true";
                 }
                 context.Response.Redirect("frameset.asp?target=https://openingdaysp.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
             }
-            else if (context.Request.QueryString["section"] == "springsp")
+            else if (context.Request.QueryString["section"] == "springem")
             {
-                if (context.Session["springsp_login"] == null)
+                if (context.Session["springem_login"] == null)
                 {
                     LogThisLogin(context);
-                    context.Session["springsp_login"] = "true";
+                    context.Session["springem_login"] = "true";
                 }
                 context.Response.Redirect("frameset.asp?target=https://springtrainingsp.mlbstyleguide.com/sitelet/2022?token=" + context.Request.QueryString["guid"]);
             }
-			else if (context.Request.QueryString["section"] == "worldsp")
+			else if (context.Request.QueryString["section"] == "worldem")
             {
-                if (context.Session["worldsp_login"] == null)
+                if (context.Session["worldem_login"] == null)
                 {
                     LogThisLogin(context);
-                    context.Session["worldsp_login"] = "true";
+                    context.Session["worldem_login"] = "true";
                 }
                 context.Response.Redirect("frameset.asp?target=https://postseasonsp.mlbstyleguide.com/sitelet/2023?token=" + context.Request.QueryString["guid"]);
             }
