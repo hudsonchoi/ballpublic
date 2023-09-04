@@ -230,6 +230,15 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                 }
                 context.Response.Redirect("frameset.asp?target=https://postseasonsp.mlbstyleguide.com/sitelet/2023?token=" + context.Request.QueryString["guid"]);
             }
+			else if (context.Request.QueryString["section"] == "restricted5")
+            {
+                if (context.Session["restricted5_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["restricted5_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://restricteddownload5.mlbstyleguide.com/sitelet/2023?token=" + context.Request.QueryString["guid"]);
+            }
         }
     }
 

@@ -333,6 +333,7 @@ Sub ProvideLuxuryService()
 			Case "23" Session("MemberData").Item("openingem") = True
 			Case "24" Session("MemberData").Item("springem") = True
 			Case "25" Session("MemberData").Item("worldem") = True
+			Case "26" Session("MemberData").Item("restricted5") = True
 		Case Else
 		End Select
         oRsLicenseeSitelets.MoveNext
@@ -391,6 +392,7 @@ Sub ProvideSuperiorService(ByRef myUID)
 			Case "23" Session("MemberData").Item("openingem") = True
 			Case "24" Session("MemberData").Item("springem") = True
 			Case "25" Session("MemberData").Item("worldem") = True
+			Case "26" Session("MemberData").Item("restricted5") = True
 		    Case Else
 		End Select
         oRsLicenseeSitelets.MoveNext
@@ -451,6 +453,7 @@ Sub ProvideModerateService(ByRef myUID, ByRef myAllowedYear)
                 Case "23" Session("MemberData").Item("openingem") = True
                 Case "24" Session("MemberData").Item("springem") = True
 				Case "25" Session("MemberData").Item("worldem") = True
+				Case "26" Session("MemberData").Item("restricted5") = True
 		        Case Else
 		    End Select
             oRsLicenseeSitelets.MoveNext
@@ -513,6 +516,7 @@ Sub ProvideGeneralService(ByRef myUID, ByRef myFromDate, ByRef myToDate)
                 Case "23" Session("MemberData").Item("openingem") = True
                 Case "24" Session("MemberData").Item("springem") = True
 				Case "25" Session("MemberData").Item("worldem") = True
+				Case "26" Session("MemberData").Item("restricted5") = True
 		        Case Else
 		    End Select
             oRsLicenseeSitelets.MoveNext
