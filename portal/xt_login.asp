@@ -295,8 +295,9 @@ Sub ProvideLuxuryService()
     Do while not oRsLicenseeSitelets.EOF
         Select Case  oRsLicenseeSitelets("sid")
 		    Case "1" REM ATTENTION! ATTENTION! ATTENTION!
-		             REM When launching 2025 'ADD' Session("MemberData").Item("mlb2025") = True below!
-		             Session("MemberData").Item("mlb2024") = True 
+		             REM When launching 2026 'ADD' Session("MemberData").Item("mlb2026") = True below!
+		             Session("MemberData").Item("mlb2025") = True 
+					 Session("MemberData").Item("mlb2024") = True 
 					 Session("MemberData").Item("mlb2023") = True 
 					 Session("MemberData").Item("mlb2022") = True 
                      Session("MemberData").Item("mlb2021") = True 
@@ -351,14 +352,15 @@ Sub ProvideSuperiorService(ByRef myUID)
     
     Do while not oRsLicenseeSitelets.EOF
         Select Case  oRsLicenseeSitelets("sid")
-		    Case "1" Session("MemberData").Item("mlb2023") = True
-                     REM ATTENTION! ATTENTION! ATTENTION!
-                     REM When launching 2025 add Session("MemberData").Item("mlb2024") = True above!
-		             If Now > DateValue("1/1/24") Then 'And change the date left to '1/1/25'
+		    Case "1" If Now > DateValue("1/1/25") Then 'And change the date left to '1/1/26'
 		                REM ATTENTION! ATTENTION! ATTENTION!
-                        REM When launching 2025 replace the below to Session("MemberData").Item("mlb2025") = True!
-		                Session("MemberData").Item("mlb2024") = True
+                        REM When launching 2026 change below to Session("MemberData").Item("mlb2026") = True!
+		                Session("MemberData").Item("mlb2025") = True
 		             End If
+					 REM ATTENTION! ATTENTION! ATTENTION!
+                     REM When launching 2026 add Session("MemberData").Item("mlb2025") = True below!
+					 Session("MemberData").Item("mlb2024") = True
+					 Session("MemberData").Item("mlb2023") = True
 					 Session("MemberData").Item("mlb2022") = True
 					 Session("MemberData").Item("mlb2021") = True
                      Session("MemberData").Item("mlb2020") = True
@@ -414,26 +416,27 @@ Sub ProvideModerateService(ByRef myUID, ByRef myAllowedYear)
         
         Do while not oRsLicenseeSitelets.EOF
             Select Case  oRsLicenseeSitelets("sid")
-		        Case "1" Session("MemberData").Item("mlb2023") = True
-		             REM ATTENTION! ATTENTION! ATTENTION!
-                     REM When launching 2025 add Session("MemberData").Item("mlb2024") = True above!
-		             If Now > DateValue("1/1/24") Then 'And change the date left to '1/1/25'
-		                REM ATTENTION! ATTENTION! ATTENTION!
-                        REM When launching 2025 replace the below to Session("MemberData").Item("mlb2025") = True!
-		                Session("MemberData").Item("mlb2024") = True
-		             End If
-					 Session("MemberData").Item("mlb2022") = True
-					 Session("MemberData").Item("mlb2021") = True
-                     Session("MemberData").Item("mlb2020") = True
-                     Session("MemberData").Item("mlb2019") = True
-					 Session("MemberData").Item("mlb2018") = True
-					 Session("MemberData").Item("mlb2012") = True
-		             Session("MemberData").Item("mlb2011") = True
-					 Session("MemberData").Item("mlb2010") = True
-		             Session("MemberData").Item("mlb2009") = True
-		             Session("MemberData").Item("mlb2003") = True
-					 Session("MemberData").Item("mlb") = True
-					 Session("MemberData").Item("mlb2008") = True
+		        Case "1" If Now > DateValue("1/1/25") Then 'And change the date left to '1/1/26'
+							REM ATTENTION! ATTENTION! ATTENTION!
+							REM When launching 2026 change below to Session("MemberData").Item("mlb2026") = True!
+							Session("MemberData").Item("mlb2025") = True
+						 End If
+						 REM ATTENTION! ATTENTION! ATTENTION!
+						 REM When launching 2026 add Session("MemberData").Item("mlb2025") = True below!
+						 Session("MemberData").Item("mlb2024") = True
+						 Session("MemberData").Item("mlb2023") = True
+						 Session("MemberData").Item("mlb2022") = True
+						 Session("MemberData").Item("mlb2021") = True
+						 Session("MemberData").Item("mlb2020") = True
+						 Session("MemberData").Item("mlb2019") = True
+						 Session("MemberData").Item("mlb2018") = True
+						 Session("MemberData").Item("mlb2012") = True
+						 Session("MemberData").Item("mlb2011") = True
+						 Session("MemberData").Item("mlb2010") = True
+						 Session("MemberData").Item("mlb2009") = True
+						 Session("MemberData").Item("mlb2003") = True
+						 Session("MemberData").Item("mlb") = True
+						 Session("MemberData").Item("mlb2008") = True
 		        Case "2" Session("MemberData").Item("spring") = True
 		        Case "3" Session("MemberData").Item("alls") = True
 		        Case "4" Session("MemberData").Item("world") = True
@@ -479,26 +482,27 @@ Sub ProvideGeneralService(ByRef myUID, ByRef myFromDate, ByRef myToDate)
         
         Do while not oRsLicenseeSitelets.EOF
             Select Case  oRsLicenseeSitelets("sid")
-		        Case "1" Session("MemberData").Item("mlb2023") = True
-		             REM ATTENTION! ATTENTION! ATTENTION!
-                     REM When launching 2025 add Session("MemberData").Item("mlb2024") = True above!
-		             If Now > DateValue("1/1/24") Then 'And change the date left to '1/1/25'
-		                REM ATTENTION! ATTENTION! ATTENTION!
-                        REM When launching 2025 replace the below to Session("MemberData").Item("mlb2025") = True!
-		                Session("MemberData").Item("mlb2024") = True
-		             End If
-                     Session("MemberData").Item("mlb2022") = True
-					 Session("MemberData").Item("mlb2021") = True
-					 Session("MemberData").Item("mlb2020") = True
-					 Session("MemberData").Item("mlb2019") = True
-                     Session("MemberData").Item("mlb2018") = True
-					 Session("MemberData").Item("mlb2012") = True
-		             Session("MemberData").Item("mlb2011") = True
-					 Session("MemberData").Item("mlb2010") = True
-		             Session("MemberData").Item("mlb2009") = True
-		             Session("MemberData").Item("mlb2003") = True
-					 Session("MemberData").Item("mlb") = True
-					 Session("MemberData").Item("mlb2008") = True	
+		        Case "1" If Now > DateValue("1/1/25") Then 'And change the date left to '1/1/26'
+							REM ATTENTION! ATTENTION! ATTENTION!
+							REM When launching 2026 change below to Session("MemberData").Item("mlb2026") = True!
+							Session("MemberData").Item("mlb2025") = True
+						 End If
+						 REM ATTENTION! ATTENTION! ATTENTION!
+						 REM When launching 2026 add Session("MemberData").Item("mlb2025") = True below!
+						 Session("MemberData").Item("mlb2024") = True
+						 Session("MemberData").Item("mlb2023") = True
+						 Session("MemberData").Item("mlb2022") = True
+						 Session("MemberData").Item("mlb2021") = True
+						 Session("MemberData").Item("mlb2020") = True
+						 Session("MemberData").Item("mlb2019") = True
+						 Session("MemberData").Item("mlb2018") = True
+						 Session("MemberData").Item("mlb2012") = True
+						 Session("MemberData").Item("mlb2011") = True
+						 Session("MemberData").Item("mlb2010") = True
+						 Session("MemberData").Item("mlb2009") = True
+						 Session("MemberData").Item("mlb2003") = True
+						 Session("MemberData").Item("mlb") = True
+						 Session("MemberData").Item("mlb2008") = True	
 		        Case "2" Session("MemberData").Item("spring") = True
 		        Case "3" Session("MemberData").Item("alls") = True
 		        Case "4" Session("MemberData").Item("world") = True

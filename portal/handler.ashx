@@ -13,7 +13,16 @@ public class Handler : IHttpHandler, IRequiresSessionState {
 
 
         if ((context.Request.QueryString["section"] != null)&&(context.Request.QueryString["email"] != null)&&(context.Request.QueryString["guid"] != null)){
-            if (context.Request.QueryString["section"] == "mlb2024")
+            if (context.Request.QueryString["section"] == "mlb2025")
+            {
+                if (context.Session["mlb_login"] == null)
+                {
+                    LogThisLogin(context);
+                    context.Session["mlb_login"] = "true";
+                }
+                context.Response.Redirect("frameset.asp?target=https://clubmarks.mlbstyleguide.com/sitelet/2025?token=" + context.Request.QueryString["guid"]);
+            }
+			else if (context.Request.QueryString["section"] == "mlb2024")
             {
                 if (context.Session["mlb_login"] == null)
                 {
@@ -21,15 +30,6 @@ public class Handler : IHttpHandler, IRequiresSessionState {
                     context.Session["mlb_login"] = "true";
                 }
                 context.Response.Redirect("frameset.asp?target=https://clubmarks.mlbstyleguide.com/sitelet/2024?token=" + context.Request.QueryString["guid"]);
-            }
-			else if (context.Request.QueryString["section"] == "mlb2023")
-            {
-                if (context.Session["mlb_login"] == null)
-                {
-                    LogThisLogin(context);
-                    context.Session["mlb_login"] = "true";
-                }
-                context.Response.Redirect("frameset.asp?target=https://clubmarks.mlbstyleguide.com/sitelet/2023?token=" + context.Request.QueryString["guid"]);
             }
             else if (context.Request.QueryString["section"] == "spring")
             {
