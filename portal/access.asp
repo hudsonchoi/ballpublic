@@ -49,7 +49,7 @@
             <% REM ATTENTION! ATTENTION! ATTENTION!
                REM When launching 2026 replace the below to Session("MemberData").Item("mlb2025") AND update the button graphics %>
 		     <% If Session("MemberData").Item("mlb2024") Then %>
-            <div class="sitelet"><a href="handler.ashx?section=mlb2024&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarks','','./images/access/marks24_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks24.png" name="clubmarks" width="410" height="51" border="0" id="clubmarks"/></a></div>
+            <!--<div class="sitelet"><a href="handler.ashx?section=mlb2024&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('clubmarks','','./images/access/marks24_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/marks24.png" name="clubmarks" width="410" height="51" border="0" id="clubmarks"/></a></div>-->
             <% End If%>
 			
             <% If Session("MemberData").Item("spring") Then %>
@@ -90,10 +90,6 @@
 
             <% If Session("MemberData").Item("mascot") Then %>
             <div class="sitelet"><a href="handler.ashx?section=mascot&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('mascot','','./images/access/mascot_h.jpg',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/mascot.jpg" name="mascot" width="410" height="51" border="0" id="mascot"></a></div>
-            <% End If %>
-
-            <% If Session("MemberData").Item("minor") Then %>
-            <div class="sitelet"><a href="handler.ashx?section=minor&email=<%=Session("MemberData").Item("Email")%>&guid=<%=Session("Guid")%>" target="_top" onMouseOver="MM_swapImage('minor','','./images/access/minor_h.png',1)" onMouseOut="MM_swapImgRestore()" onClick="MM_swapImgRestore()"><img src="./images/access/minor.png" name="minor" width="410" height="51" border="0" id="minor"></a></div>
             <% End If %>
             
             <% If Session("MemberData").Item("mascotbabies") Then %>	
